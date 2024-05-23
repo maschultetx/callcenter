@@ -34,14 +34,9 @@ view: toareacodes {
 
   dimension: location {
     type: location
-    group_label: "Address Info"
+    map_layer_name: us_states
     sql_latitude: ${TABLE}.latitude ;;
     sql_longitude: ${TABLE}.longitude ;;
-    link: {
-      #url: "https://actianavalanchepartner.cloud.looker.com/dashboards/63?Address=%22{{ customer.address._value | encode_uri}}%22&Location={{customer.location._value | encode_uri}}&Custid={{customer.custid._value | encode_uri}}"
-      label: "City Detail - not implemented"
-      icon_url: "https://img.icons8.com/cotton/2x/worldwide-location.png"
-    }
   }
 
   dimension: citywithcode{
