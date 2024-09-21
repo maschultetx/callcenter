@@ -127,6 +127,18 @@ view: fromcustomer {
     type: zipcode
     sql: ${TABLE}.zipcode ;;
   }
+  dimension: age {
+    type: number
+    sql:  timestampdiff(days,${date_of_birth_date},current_date)/365;;
+  }
+  dimension: age_range {
+    type: string
+    sql: ${TABLE}.age_range ;;
+  }
+  dimension: loyalty_age_range {
+    type: string
+    sql: ${TABLE}.loyalty_age_range ;;
+  }
   measure: count {
     type: count
     drill_fields: [customer_id, first_name, last_name]
