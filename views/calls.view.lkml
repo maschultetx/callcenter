@@ -52,6 +52,18 @@ view: calls {
     sql: ${TABLE}.toareacode ;;
   }
 
+  # need this because whole phone number is too random on generated data in demo
+  dimension: fromareaexchange {
+    type: string
+    sql: ${TABLE}.fromareaexchange ;;
+  }
+
+  # need this because whole phone number is too random on generated data in demo
+  dimension: toareaexchange {
+    type: string
+    sql: ${TABLE}.toareaexchange ;;
+  }
+
   measure: count {
     type: count
 

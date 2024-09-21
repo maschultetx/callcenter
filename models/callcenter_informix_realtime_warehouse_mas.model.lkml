@@ -28,13 +28,13 @@ explore: calls {
 
   join: tocustomer {
     type: full_outer
-    sql_on: ${calls.toareacode} = ${tocustomer.area_code} ;;
+    sql_on: ${calls.toareaexchange} = ${tocustomer.phone_number_exchange} ;;
     relationship: many_to_one
   }
 
   join: fromcustomer {
     type: full_outer
-    sql_on: ${calls.fromareacode} = ${fromcustomer.area_code} ;;
+    sql_on: ${calls.fromareaexchange} = ${fromcustomer.phone_number_exchange} ;;
     relationship: many_to_one
   }
 

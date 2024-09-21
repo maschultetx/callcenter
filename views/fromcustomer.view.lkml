@@ -19,6 +19,11 @@ view: fromcustomer {
     type: string
     sql: ${TABLE}.area_code ;;
   }
+  # using this because whole number is too random in the generated data
+  dimension: phone_number_exchange {
+    type: string
+    sql: ${TABLE}.phone_number_exchange ;;
+  }
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
