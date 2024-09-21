@@ -26,4 +26,16 @@ explore: calls {
     relationship: many_to_one
   }
 
+  join: tocustomer {
+    type: full_outer
+    sql_on: ${calls.toareacode} = ${tocustomer.area_code} ;;
+    relationship: many_to_one
+  }
+
+  join: fromcustomer {
+    type: full_outer
+    sql_on: ${calls.fromareacode} = ${fromcustomer.area_code} ;;
+    relationship: many_to_one
+  }
+
 }
